@@ -4,6 +4,7 @@
   "description": "Multi-channel EC sales dashboard with platform comparison",
   "logoUrl": "https://raw.githubusercontent.com/googledatastudio/community-visualizations/master/docs/images/viz-logo-template.png",
   "organizationUrl": "https://github.com/katakanaonline",
+  "packageUrl": "https://github.com/katakanaonline/looker-ec-dashboard",
   "supportUrl": "https://github.com/katakanaonline/looker-ec-dashboard/issues",
   "privacyPolicyUrl": "https://github.com/katakanaonline/looker-ec-dashboard/blob/main/PRIVACY.md",
   "devMode": false,
