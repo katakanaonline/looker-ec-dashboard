@@ -1,0 +1,23 @@
+{
+  "name": "EC Platform Dashboard",
+  "organization": "Katakana Jimusho",
+  "description": "Multi-channel EC sales dashboard with platform comparison",
+  "logoUrl": "https://raw.githubusercontent.com/googledatastudio/community-visualizations/master/docs/images/viz-logo-template.png",
+  "organizationUrl": "https://github.com/katakanaonline",
+  "supportUrl": "https://github.com/katakanaonline/looker-ec-dashboard/issues",
+  "privacyPolicyUrl": "https://github.com/katakanaonline/looker-ec-dashboard/blob/main/PRIVACY.md",
+  "devMode": true,
+  "components": [
+    {
+      "id": "ecDashboard",
+      "name": "EC Platform Dashboard",
+      "description": "Comprehensive dashboard showing scorecard, platform comparison, table, and trends",
+      "iconUrl": "https://raw.githubusercontent.com/googledatastudio/community-visualizations/master/docs/images/viz-logo-template.png",
+      "resource": {
+        "js": "gs://looker-ec-dashboard/index.js",
+        "config": "gs://looker-ec-dashboard/index.json",
+        "css": "gs://looker-ec-dashboard/index.css"
+      }
+    }
+  ]
+}
