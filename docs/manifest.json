@@ -6,6 +6,7 @@
   "organizationUrl": "https://github.com/katakanaonline",
   "supportUrl": "https://github.com/katakanaonline/looker-ec-dashboard/issues",
   "privacyPolicyUrl": "https://github.com/katakanaonline/looker-ec-dashboard/blob/main/PRIVACY.md",
+  "devMode": false,
   "components": [
     {
       "id": "ecDashboard",
