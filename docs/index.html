@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EC Platform Dashboard - Development</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="index.css">
+
+  <!-- Chart.js Local -->
+  <script src="chart.min.js"></script>
+</head>
+<body>
+  <div id="dashboard-container">
+    <div id="scorecard">
+      <div id="scorecard-label">総売上</div>
+      <div id="scorecard-value">¥813,019</div>
+    </div>
+    <div id="platform-chart">
+      <h3>モール別売上比較</h3>
+      <canvas id="platform-canvas"></canvas>
+    </div>
+    <div id="platform-table">
+      <h3>モール別詳細</h3>
+      <table id="table-content">
+        <thead>
+          <tr>
+            <th>モール</th>
+            <th>売上</th>
+          </tr>
+        </thead>
+        <tbody id="table-body">
+          <tr>
+            <td>Rakuten</td>
+            <td>¥295,971</td>
+          </tr>
+          <tr>
+            <td>Yahoo</td>
+            <td>¥265,758</td>
+          </tr>
+          <tr>
+            <td>Amazon</td>
+            <td>¥251,290</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div id="timeseries-chart">
+      <h3>日別売上推移</h3>
+      <canvas id="timeseries-canvas"></canvas>
+    </div>
+  </div>
+
+  <!-- ダミーデータでテスト -->
+  <script>
+    // 開発用: dsccがない場合のフォールバック
+    if (typeof window.dscc === 'undefined') {
+      window.dscc = {
+        subscribeToData: function(callback, options) {
+          // ダミーデータ
+          const dummyData = {
+            tables: {
+              DEFAULT: {
+                rows: [
+                  { dimensions: ['Rakuten', '20240123'], metrics: [45000] },
+                  { dimensions: ['Yahoo', '20240123'], metrics: [38000] },
+                  { dimensions: ['Amazon', '20240123'], metrics: [32000] },
+                  { dimensions: ['Rakuten', '20240124'], metrics: [42000] },
+                  { dimensions: ['Yahoo', '20240124'], metrics: [41000] },
+                  { dimensions: ['Amazon', '20240124'], metrics: [29000] },
+                  { dimensions: ['Rakuten', '20240125'], metrics: [48000] },
+                  { dimensions: ['Yahoo', '20240125'], metrics: [44000] },
+                  { dimensions: ['Amazon', '20240125'], metrics: [35000] }
+                ]
+              }
+            }
+          };
+
+          setTimeout(() => callback(dummyData), 100);
+        },
+        objectTransform: function() {}
+      };
+    }
+  </script>
+
+  <!-- メインスクリプト -->
+  <script src="index.js"></script>
+</body>
+</html>

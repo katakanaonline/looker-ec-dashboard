@@ -1,0 +1,88 @@
+{
+  "data": [
+    {
+      "id": "platform",
+      "label": "Platform",
+      "elements": [
+        {
+          "id": "dimensions",
+          "label": "Platform Dimension",
+          "type": "DIMENSION",
+          "options": {
+            "min": 1,
+            "max": 1
+          }
+        },
+        {
+          "id": "metrics",
+          "label": "Amount",
+          "type": "METRIC",
+          "options": {
+            "min": 1,
+            "max": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "timeSeries",
+      "label": "Time Series",
+      "elements": [
+        {
+          "id": "dateDimension",
+          "label": "Date",
+          "type": "DIMENSION",
+          "options": {
+            "min": 1,
+            "max": 1
+          }
+        },
+        {
+          "id": "platformDimension",
+          "label": "Platform (for line colors)",
+          "type": "DIMENSION",
+          "options": {
+            "min": 0,
+            "max": 1
+          }
+        },
+        {
+          "id": "amountMetric",
+          "label": "Amount",
+          "type": "METRIC",
+          "options": {
+            "min": 1,
+            "max": 1
+          }
+        }
+      ]
+    }
+  ],
+  "style": [
+    {
+      "id": "chartColors",
+      "label": "Chart Colors",
+      "elements": [
+        {
+          "id": "rakutenColor",
+          "label": "Rakuten Color",
+          "type": "FILL_COLOR",
+          "defaultValue": "#BF0000"
+        },
+        {
+          "id": "yahooColor",
+          "label": "Yahoo Color",
+          "type": "FILL_COLOR",
+          "defaultValue": "#FF0033"
+        },
+        {
+          "id": "amazonColor",
+          "label": "Amazon Color",
+          "type": "FILL_COLOR",
+          "defaultValue": "#FF9900"
+        }
+      ]
+    }
+  ],
+  "interactions": []
+}
